@@ -7,5 +7,5 @@ zephyr_library_compile_options(
 )
 
 zephyr_library_sources(
-    tiff_display.c
+    tga_display.c
 )

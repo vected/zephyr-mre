@@ -1,0 +1,12 @@
+description: A display driver that uses a tga file as framebuffer
+
+compatible: "custom,tga-display"
+
+include: display-controller.yaml
+
+properties:
+  framebuffer_path:
+    type: string
+    required: true
+    description: |
+      The path of the framebuffer tga file.

@@ -1,5 +1,0 @@
-config TIFF_DISPLAY
-    bool "Display that uses a tiff file as framebuffer"
-    depends on FILE_SYSTEM
-    help
-      Enable support for the tiff display driver.

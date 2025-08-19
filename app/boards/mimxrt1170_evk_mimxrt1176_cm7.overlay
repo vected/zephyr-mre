@@ -1,7 +1,7 @@
 / {
     chosen {
         zephyr,uart-mcumgr = &cdc_acm_uart0;
-        zephyr,display = &tiff_display;
+        zephyr,display = &tga_display;
     };
 
     fstab {
@@ -19,11 +19,11 @@
         };
     };
 
-    tiff_display: tiff_display {
-        compatible = "custom,tiff-display";
+    tga_display: tga_display {
+        compatible = "custom,tga-display";
         width = <640>;
         height = <480>;
-        framebuffer_path = "/storage/framebuffer.tif";
+        framebuffer_path = "/storage/framebuffer.tga";
 		status = "okay";
     };
 };

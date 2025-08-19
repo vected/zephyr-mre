@@ -1,0 +1,5 @@
+config TGA_DISPLAY
+    bool "Display that uses a tga file as framebuffer"
+    depends on FILE_SYSTEM
+    help
+      Enable support for the tga display driver.

@@ -1,1 +1,1 @@
-add_subdirectory_ifdef(CONFIG_TIFF_DISPLAY tiff_display)
+add_subdirectory_ifdef(CONFIG_TGA_DISPLAY tga_display)
