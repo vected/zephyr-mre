@@ -49,7 +49,7 @@ static int tiff_display_write(const struct device *dev, const uint16_t x,
 
     int err = -ENOSYS;
 
-    return err;
+    return 0;
 }
 
 static int tiff_display_clear(const struct device *dev)
@@ -66,7 +66,7 @@ static int tiff_display_clear(const struct device *dev)
 
     int err = -ENOSYS;
 
-    return err;
+    return 0;
 }
 
 static void tiff_display_get_capabilities(const struct device *dev,

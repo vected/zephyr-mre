@@ -9,8 +9,6 @@ environment. Follow the official
 
 ### Workspace setup
 
-IMPORTANT: Do **not** check out the repository directly. Let the `west` tool do that for you later.
-
 We need to create a Zephyr Workspace directory which will then contain both zephyr and our own code.
 
 ```shell
