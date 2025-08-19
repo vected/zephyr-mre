@@ -1,0 +1,35 @@
+/ {
+    chosen {
+        zephyr,uart-mcumgr = &cdc_acm_uart0;
+        zephyr,display = &tiff_display;
+    };
+
+    fstab {
+        compatible = "zephyr,fstab";
+        factory: lfs1 {
+            compatible = "zephyr,fstab,littlefs";
+            mount-point = "/foo";
+            partition = <&storage_partition>;
+            automount;
+            read-size = <16>;
+            prog-size = <16>;
+            cache-size = <64>;
+            lookahead-size = <32>;
+            block-cycles = <512>;
+        };
+    };
+
+    tiff_display: tiff_display {
+        compatible = "custom,tiff-display";
+        width = <640>;
+        height = <480>;
+        framebuffer_path = "/foo/aa.tif";
+		status = "okay";
+    };
+};
+
+&zephyr_udc0 {
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};

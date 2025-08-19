@@ -1,0 +1,25 @@
+{
+    "C Header Template": {
+        "isFileTemplate": true,
+        "scope": "c",
+        "prefix": "c header with c++ compatibiltiy",
+        "body": [
+            "#pragma once",
+            "",
+            "/* C/C++ compatible headers */",
+            "",
+            "#ifdef __cplusplus",
+            "extern \"C\" {",
+            "#endif",
+            "",
+            "/* C headers */",
+            "",
+            "/* Definitions */",
+            "",
+            "#ifdef __cplusplus",
+            "} /*extern \"C\"*/",
+            "#endif"
+        ],
+        "description": "A basic C header with C++ compatibility"
+    }
+}

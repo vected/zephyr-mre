@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+
+/.vscode/
+/build*
+/twister-out*
+/doc/_build*
+/deploy/
+/release/

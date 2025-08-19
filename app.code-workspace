@@ -1,0 +1,46 @@
+{
+    "folders": [
+        {
+            "name": "app",
+            "path": ".",
+        },
+    ],
+    "settings": {
+        "C_Cpp.autoAddFileAssociations": false,
+        "C_Cpp.default.compileCommands": "${workspaceFolder:app}/build/compile_commands.json",
+        "cmake.generator": "Ninja",
+        "cmake.sourceDirectory": "${workspaceFolder:app}/app",
+        "cmake.showSystemKits": false,
+        "cmake.configureOnOpen": false,
+        "cmake.configureOnEdit": false,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.watcherExclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/.git": true,
+            "**/.west/**": true,
+            "**/.vscode/**": true,
+            "${workspaceRoot}/../zephyr/**": true
+        },
+        "files.exclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/.git": true,
+            "**/.west/**": true
+        },
+        "search.exclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/.git": true,
+            "**/.west/**": true,
+        },
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cpptools-extension-pack",
+            "redhat.vscode-yaml",
+        ]
+    },
+}

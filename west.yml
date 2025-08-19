@@ -1,0 +1,23 @@
+manifest:
+  self:
+    path: cpu
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: 183444eed4dcf2ecf13a1de75504981ed3b11e11 # v4.2-branch
+      import:
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis_6 # required by the ARM port
+          - hal_nxp # required by IMXRT1176
+          - lvgl
+          - zcbor
+          - mcumgr
+          - littlefs
+          - mbedtls

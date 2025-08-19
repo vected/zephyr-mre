@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Zephyr",
+        "environmentSetupScript": "${workspaceFolder}/../zephyr/zephyr-env.cmd",
+        "environmentVariables": {
+            "PATH": "${workspaceFolder}/../.venv/Scripts;${env.PATH}"
+        }
+    },
+    {
+        "name": "Zephyr (Linux)",
+        "environmentSetupScript": "${workspaceFolder}/../zephyr/zephyr-env.sh",
+        "environmentVariables": {
+            "PATH": "${workspaceFolder}/../.venv/bin:${env.PATH}"
+        }
+    }
+]

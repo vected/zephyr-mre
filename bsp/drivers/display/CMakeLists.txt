@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_TIFF_DISPLAY tiff_display)
