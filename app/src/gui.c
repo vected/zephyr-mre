@@ -1,5 +1,8 @@
 #include "gui.h"
 
+#include <zephyr/drivers/display.h>
+#include <zephyr/kernel.h>
+
 #include <lvgl.h>
 
 void render_test_image(lv_obj_t *parent)
@@ -53,11 +56,22 @@ void render_test_image(lv_obj_t *parent)
     }
 }
 
-void gui_init(void)
+void gui_run(void)
 {
+    const struct device *display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
+
     /* Set background color to black transparent */
     lv_obj_set_style_bg_opa(lv_screen_active(), LV_OPA_TRANSP, LV_PART_MAIN);
     lv_obj_set_style_bg_opa(lv_layer_bottom(), LV_OPA_TRANSP, LV_PART_MAIN);
 
     render_test_image(lv_screen_active());
+
+    lv_timer_handler();
+    display_blanking_off(display_dev);
+
+    while (1) {
+        uint32_t sleep_ms = lv_timer_handler();
+
+        k_msleep(MIN(sleep_ms, INT32_MAX));
+    }
 }

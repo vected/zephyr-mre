@@ -24,6 +24,8 @@ static int tiff_display_init(const struct device *dev)
 
     (void)k_mutex_init(&data->lock);
 
+    LOG_INF("Display init");
+
     return 0;
 }
 
@@ -45,9 +47,7 @@ static int tiff_display_write(const struct device *dev, const uint16_t x,
     // const uint32_t update_height = desc->height;
     // const uint32_t update_pitch  = desc->pitch * BYTES_PER_PIXEL;
 
-    LOG_DBG("Display Write at (%d, %d): %d x %d", x, y, desc->width, desc->height);
-
-    int err = -ENOSYS;
+    LOG_INF("Display write at (%d, %d): %d x %d", x, y, desc->width, desc->height);
 
     return 0;
 }
@@ -64,7 +64,7 @@ static int tiff_display_clear(const struct device *dev)
     // const uint32_t screen_height = config->height;
     // const uint32_t screen_size   = screen_height * screen_pitch;
 
-    int err = -ENOSYS;
+    LOG_INF("Display clear");
 
     return 0;
 }
@@ -81,6 +81,8 @@ static void tiff_display_get_capabilities(const struct device *dev,
         .current_pixel_format    = PIXEL_FORMAT_ARGB_8888,
         .current_orientation     = DISPLAY_ORIENTATION_NORMAL,
     };
+
+    LOG_INF("Display get capabilities");
 }
 
 static const struct display_driver_api tiff_display_api = {
