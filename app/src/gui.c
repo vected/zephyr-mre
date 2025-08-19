@@ -58,4 +58,6 @@ void gui_init(void)
     /* Set background color to black transparent */
     lv_obj_set_style_bg_opa(lv_screen_active(), LV_OPA_TRANSP, LV_PART_MAIN);
     lv_obj_set_style_bg_opa(lv_layer_bottom(), LV_OPA_TRANSP, LV_PART_MAIN);
+
+    render_test_image(lv_screen_active());
 }

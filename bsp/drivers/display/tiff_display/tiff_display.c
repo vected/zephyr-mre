@@ -81,12 +81,6 @@ static void tiff_display_get_capabilities(const struct device *dev,
         .current_pixel_format    = PIXEL_FORMAT_ARGB_8888,
         .current_orientation     = DISPLAY_ORIENTATION_NORMAL,
     };
-    capabilities->x_resolution            = config->width;
-    capabilities->y_resolution            = config->height;
-    capabilities->supported_pixel_formats = PIXEL_FORMAT_ARGB_8888;
-    capabilities->screen_info             = SCREEN_INFO_DOUBLE_BUFFER;
-    capabilities->current_pixel_format    = PIXEL_FORMAT_ARGB_8888;
-    capabilities->current_orientation     = DISPLAY_ORIENTATION_NORMAL;
 }
 
 static const struct display_driver_api tiff_display_api = {
