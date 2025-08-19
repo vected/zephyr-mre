@@ -6,9 +6,9 @@
 
     fstab {
         compatible = "zephyr,fstab";
-        factory: lfs1 {
+        storage: lfs1 {
             compatible = "zephyr,fstab,littlefs";
-            mount-point = "/foo";
+            mount-point = "/";
             partition = <&storage_partition>;
             automount;
             read-size = <16>;
@@ -23,7 +23,7 @@
         compatible = "custom,tiff-display";
         width = <640>;
         height = <480>;
-        framebuffer_path = "/foo/aa.tif";
+        framebuffer_path = "/framebuffer.tif";
 		status = "okay";
     };
 };
